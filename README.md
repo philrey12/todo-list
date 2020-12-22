@@ -1,2 +1,2 @@
 # todo-list
-Todo List (Demo)
+Todo List
