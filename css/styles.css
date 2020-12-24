@@ -27,8 +27,21 @@ input[type=text]:focus {
     background: #423a6f;
 }
 
-.delete {
+.delete,
+.stat {
     cursor: pointer;
+}
+
+.stat {
+    white-space: nowrap; 
+    width: 325px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: lightgrey;
 }
 
 .filtered {

@@ -6,7 +6,7 @@ const search = document.querySelector('.search input');
 const generateTemplate = todo => {
     const html = `
         <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span>${todo}</span>
+            <span class="stat">${todo}</span>
             <i class="far fa-trash-alt delete"></i>
         </li>
     `;
@@ -21,6 +21,13 @@ addForm.addEventListener('submit', e => {
     if (todo.length) {
         generateTemplate(todo);
         addForm.reset();
+    }
+});
+
+// toggle status
+list.addEventListener('click', e => {
+    if (e.target.classList.contains('stat')) {
+        e.target.classList.toggle('completed');
     }
 });
 
