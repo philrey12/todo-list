@@ -1,3 +1,3 @@
 # todo-list
-Todo List\
+To-do List\
 Demo: https://philrey12.github.io/todo-list
