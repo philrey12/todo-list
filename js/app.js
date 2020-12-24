@@ -1,6 +1,7 @@
 const addForm = document.querySelector('.add');
 const list = document.querySelector('.todos');
 
+// add to-do
 const generateTemplate = todo => {
     const html = `
         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -19,5 +20,12 @@ addForm.addEventListener('submit', e => {
     if (todo.length) {
         generateTemplate(todo);
         addForm.reset();
+    }
+});
+
+// delete to-do
+list.addEventListener('click', e => {
+    if (e.target.classList.contains('delete')) {
+        e.target.parentElement.remove();
     }
 });
